@@ -14656,6 +14656,61 @@ high speed (Philips)</description>
 </deviceset>
 </devicesets>
 </library>
+<library name="solpad">
+<description>&lt;b&gt;Solder Pads/Test Points&lt;/b&gt;&lt;p&gt;
+&lt;author&gt;Created by librarian@cadsoft.de&lt;/author&gt;</description>
+<packages>
+<package name="LSP11">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.1 mm</description>
+<wire x1="-1.27" y1="0.254" x2="-1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.27" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="0.254" x2="1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.27" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="-0.254" x2="-1.143" y2="-0.254" width="0.1524" layer="21"/>
+<wire x1="-1.27" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="21"/>
+<wire x1="1.143" y1="0.254" x2="0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-1.143" y1="-0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="0.254" x2="-0.635" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="0.635" y1="-0.254" x2="1.143" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-0.635" y2="-0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="0.254" x2="-1.143" y2="0.254" width="0.1524" layer="51"/>
+<wire x1="-0.635" y1="-0.254" x2="0.635" y2="-0.254" width="0.1524" layer="51"/>
+<pad name="MP" x="0" y="0" drill="1.1176" diameter="2.159" shape="octagon"/>
+<text x="-1.27" y="1.27" size="1.27" layer="25" ratio="10">&gt;NAME</text>
+<text x="0" y="0.254" size="0.0254" layer="27">&gt;VALUE</text>
+</package>
+</packages>
+<symbols>
+<symbol name="LSP">
+<wire x1="-1.016" y1="2.032" x2="1.016" y2="0" width="0.254" layer="94"/>
+<wire x1="-1.016" y1="0" x2="1.016" y2="2.032" width="0.254" layer="94"/>
+<circle x="0" y="1.016" radius="1.016" width="0.4064" layer="94"/>
+<text x="-1.27" y="2.921" size="1.778" layer="95">&gt;NAME</text>
+<pin name="MP" x="0" y="-2.54" visible="off" length="short" direction="pas" rot="R90"/>
+</symbol>
+</symbols>
+<devicesets>
+<deviceset name="LSP11" prefix="LSP">
+<description>&lt;b&gt;SOLDER PAD&lt;/b&gt;&lt;p&gt;
+drill 1.1 mm</description>
+<gates>
+<gate name="1" symbol="LSP" x="0" y="0"/>
+</gates>
+<devices>
+<device name="" package="LSP11">
+<connects>
+<connect gate="1" pin="MP" pad="MP"/>
+</connects>
+<technologies>
+<technology name=""/>
+</technologies>
+</device>
+</devices>
+</deviceset>
+</devicesets>
+</library>
 </libraries>
 <attributes>
 </attributes>
@@ -14699,7 +14754,7 @@ high speed (Philips)</description>
 <part name="P+2" library="supply1" deviceset="+12V" device=""/>
 <part name="P+1" library="supply1" deviceset="+12V" device=""/>
 <part name="P+3" library="supply1" deviceset="+12V" device=""/>
-<part name="D1" library="diode" deviceset="1N4148" device="DO35-7"/>
+<part name="D1" library="diode" deviceset="1N4148" device="DO35-10" value="1N4148DO35-10"/>
 <part name="C1" library="rcl" deviceset="C-US" device="050-024X044" value="100p"/>
 <part name="R8" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="R9" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
@@ -14723,14 +14778,13 @@ high speed (Philips)</description>
 <part name="D10" library="diode" deviceset="1N4148" device="DO35-7"/>
 <part name="LED10" library="led" deviceset="LED" device="5MM"/>
 <part name="D11" library="diode" deviceset="1N4148" device="DO35-7"/>
-<part name="R10" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
+<part name="R10" library="rcl" deviceset="R-US_" device="0309/12" value="4k7"/>
 <part name="P+5" library="supply1" deviceset="+12V" device=""/>
 <part name="R11" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
 <part name="C4" library="rcl" deviceset="C-US" device="050-024X044" value="100p"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
 <part name="LED11" library="led" deviceset="LED" device="5MM"/>
 <part name="R13" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
-<part name="LOOP" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_1" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_2" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_3" library="jameco" deviceset="MTS-102-C4" device=""/>
@@ -14740,9 +14794,15 @@ high speed (Philips)</description>
 <part name="STEP_7" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_8" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_9" library="jameco" deviceset="MTS-102-C4" device=""/>
-<part name="U$10" library="jameco" deviceset="MTS-102-C4" device=""/>
-<part name="LENGTH" library="jameco" deviceset="MTS-102-C4" device=""/>
-<part name="ON_OFF" library="jameco" deviceset="MTS-102-C4" device=""/>
+<part name="STEP_10" library="jameco" deviceset="MTS-102-C4" device=""/>
+<part name="LOOP_ON" library="solpad" deviceset="LSP11" device=""/>
+<part name="LOOP_1" library="solpad" deviceset="LSP11" device=""/>
+<part name="LOOP" library="solpad" deviceset="LSP11" device=""/>
+<part name="ENABLE_1" library="solpad" deviceset="LSP11" device=""/>
+<part name="ENABLE_2" library="solpad" deviceset="LSP11" device=""/>
+<part name="LENGTH_1" library="solpad" deviceset="LSP11" device=""/>
+<part name="LENGTH_LONG" library="solpad" deviceset="LSP11" device=""/>
+<part name="LENGTH_SHORT" library="solpad" deviceset="LSP11" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14818,7 +14878,6 @@ high speed (Philips)</description>
 <instance part="R12" gate="G$1" x="259.08" y="43.18" rot="R90"/>
 <instance part="LED11" gate="G$1" x="312.42" y="55.88"/>
 <instance part="R13" gate="G$1" x="312.42" y="43.18" rot="R270"/>
-<instance part="LOOP" gate="G$1" x="99.06" y="88.9" rot="R270"/>
 <instance part="STEP_1" gate="G$1" x="142.24" y="101.6" rot="R90"/>
 <instance part="STEP_2" gate="G$1" x="152.4" y="101.6" rot="R90"/>
 <instance part="STEP_3" gate="G$1" x="162.56" y="101.6" rot="R90"/>
@@ -14828,9 +14887,15 @@ high speed (Philips)</description>
 <instance part="STEP_7" gate="G$1" x="203.2" y="101.6" rot="R90"/>
 <instance part="STEP_8" gate="G$1" x="213.36" y="101.6" rot="R90"/>
 <instance part="STEP_9" gate="G$1" x="223.52" y="101.6" rot="R90"/>
-<instance part="U$10" gate="G$1" x="233.68" y="101.6" rot="R90"/>
-<instance part="LENGTH" gate="G$1" x="243.84" y="114.3" rot="R180"/>
-<instance part="ON_OFF" gate="G$1" x="246.38" y="104.14" rot="R180"/>
+<instance part="STEP_10" gate="G$1" x="233.68" y="101.6" rot="R90"/>
+<instance part="LOOP_ON" gate="1" x="96.52" y="88.9"/>
+<instance part="LOOP_1" gate="1" x="101.6" y="88.9"/>
+<instance part="LOOP" gate="1" x="99.06" y="93.98" rot="R180"/>
+<instance part="ENABLE_1" gate="1" x="246.38" y="106.68" rot="R270"/>
+<instance part="ENABLE_2" gate="1" x="251.46" y="104.14" rot="R90"/>
+<instance part="LENGTH_1" gate="1" x="248.92" y="114.3" rot="R90"/>
+<instance part="LENGTH_LONG" gate="1" x="243.84" y="116.84" rot="R270"/>
+<instance part="LENGTH_SHORT" gate="1" x="243.84" y="111.76" rot="R270"/>
 </instances>
 <busses>
 </busses>
@@ -14894,7 +14959,7 @@ high speed (Philips)</description>
 <pinref part="P+5" gate="1" pin="+12V"/>
 <wire x1="238.76" y1="119.38" x2="238.76" y2="116.84" width="0.1524" layer="91"/>
 <wire x1="238.76" y1="116.84" x2="241.3" y2="116.84" width="0.1524" layer="91"/>
-<pinref part="LENGTH" gate="G$1" pin="P$1"/>
+<pinref part="LENGTH_LONG" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="GND" class="0">
@@ -14921,6 +14986,9 @@ high speed (Philips)</description>
 <pinref part="CLK" gate="G$1" pin="RING"/>
 <pinref part="GND1" gate="1" pin="GND"/>
 <wire x1="22.86" y1="88.9" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<pinref part="CLK" gate="G$1" pin="NORM"/>
+<wire x1="22.86" y1="93.98" x2="22.86" y2="91.44" width="0.1524" layer="91"/>
+<junction x="22.86" y="91.44"/>
 </segment>
 <segment>
 <pinref part="OUT" gate="G$1" pin="RING"/>
@@ -15094,7 +15162,7 @@ high speed (Philips)</description>
 <wire x1="96.52" y1="86.36" x2="96.52" y2="55.88" width="0.1524" layer="91"/>
 <junction x="96.52" y="55.88"/>
 <wire x1="96.52" y1="55.88" x2="96.52" y2="50.8" width="0.1524" layer="91"/>
-<pinref part="LOOP" gate="G$1" pin="P$1"/>
+<pinref part="LOOP_ON" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$12" class="0">
@@ -15107,7 +15175,7 @@ high speed (Philips)</description>
 <wire x1="241.3" y1="111.76" x2="106.68" y2="111.76" width="0.1524" layer="91"/>
 <wire x1="106.68" y1="111.76" x2="106.68" y2="104.14" width="0.1524" layer="91"/>
 <junction x="106.68" y="104.14"/>
-<pinref part="LENGTH" gate="G$1" pin="P$2"/>
+<pinref part="LENGTH_SHORT" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$14" class="0">
@@ -15118,7 +15186,7 @@ high speed (Philips)</description>
 <wire x1="101.6" y1="60.96" x2="101.6" y2="86.36" width="0.1524" layer="91"/>
 <wire x1="109.22" y1="60.96" x2="101.6" y2="60.96" width="0.1524" layer="91"/>
 <junction x="101.6" y="60.96"/>
-<pinref part="LOOP" gate="G$1" pin="P$2"/>
+<pinref part="LOOP_1" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$13" class="0">
@@ -15287,7 +15355,7 @@ high speed (Philips)</description>
 <segment>
 <pinref part="D11" gate="G$1" pin="C"/>
 <wire x1="233.68" y1="93.98" x2="233.68" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$10" gate="G$1" pin="P$3"/>
+<pinref part="STEP_10" gate="G$1" pin="P$3"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -15374,7 +15442,6 @@ high speed (Philips)</description>
 <wire x1="220.98" y1="109.22" x2="231.14" y2="109.22" width="0.1524" layer="91"/>
 <wire x1="231.14" y1="109.22" x2="231.14" y2="104.14" width="0.1524" layer="91"/>
 <junction x="220.98" y="109.22"/>
-<pinref part="LOOP" gate="G$1" pin="P$3"/>
 <pinref part="STEP_2" gate="G$1" pin="P$2"/>
 <pinref part="STEP_3" gate="G$1" pin="P$2"/>
 <pinref part="STEP_4" gate="G$1" pin="P$2"/>
@@ -15383,7 +15450,8 @@ high speed (Philips)</description>
 <pinref part="STEP_7" gate="G$1" pin="P$2"/>
 <pinref part="STEP_8" gate="G$1" pin="P$2"/>
 <pinref part="STEP_9" gate="G$1" pin="P$2"/>
-<pinref part="U$10" gate="G$1" pin="P$2"/>
+<pinref part="STEP_10" gate="G$1" pin="P$2"/>
+<pinref part="LOOP" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -15426,15 +15494,15 @@ high speed (Philips)</description>
 <pinref part="STEP_7" gate="G$1" pin="P$1"/>
 <pinref part="STEP_8" gate="G$1" pin="P$1"/>
 <pinref part="STEP_9" gate="G$1" pin="P$1"/>
-<pinref part="U$10" gate="G$1" pin="P$1"/>
-<pinref part="ON_OFF" gate="G$1" pin="P$1"/>
+<pinref part="STEP_10" gate="G$1" pin="P$1"/>
+<pinref part="ENABLE_1" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$37" class="0">
 <segment>
 <pinref part="R11" gate="G$1" pin="2"/>
 <wire x1="254" y1="114.3" x2="251.46" y2="114.3" width="0.1524" layer="91"/>
-<pinref part="LENGTH" gate="G$1" pin="P$3"/>
+<pinref part="LENGTH_1" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$38" class="0">
@@ -15445,7 +15513,7 @@ high speed (Philips)</description>
 <pinref part="IC1" gate="C" pin="I1"/>
 <wire x1="259.08" y1="104.14" x2="274.32" y2="104.14" width="0.1524" layer="91"/>
 <junction x="259.08" y="104.14"/>
-<pinref part="ON_OFF" gate="G$1" pin="P$3"/>
+<pinref part="ENABLE_2" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$41" class="0">
