@@ -14740,7 +14740,7 @@ high speed (Philips)</description>
 <part name="STEP_7" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_8" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_9" library="jameco" deviceset="MTS-102-C4" device=""/>
-<part name="U$10" library="jameco" deviceset="MTS-102-C4" device=""/>
+<part name="STEP_10" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="LENGTH" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="ON_OFF" library="jameco" deviceset="MTS-102-C4" device=""/>
 </parts>
@@ -14828,7 +14828,7 @@ high speed (Philips)</description>
 <instance part="STEP_7" gate="G$1" x="203.2" y="101.6" rot="R90"/>
 <instance part="STEP_8" gate="G$1" x="213.36" y="101.6" rot="R90"/>
 <instance part="STEP_9" gate="G$1" x="223.52" y="101.6" rot="R90"/>
-<instance part="U$10" gate="G$1" x="233.68" y="101.6" rot="R90"/>
+<instance part="STEP_10" gate="G$1" x="233.68" y="101.6" rot="R90"/>
 <instance part="LENGTH" gate="G$1" x="243.84" y="114.3" rot="R180"/>
 <instance part="ON_OFF" gate="G$1" x="246.38" y="104.14" rot="R180"/>
 </instances>
@@ -15287,7 +15287,7 @@ high speed (Philips)</description>
 <segment>
 <pinref part="D11" gate="G$1" pin="C"/>
 <wire x1="233.68" y1="93.98" x2="233.68" y2="91.44" width="0.1524" layer="91"/>
-<pinref part="U$10" gate="G$1" pin="P$3"/>
+<pinref part="STEP_10" gate="G$1" pin="P$3"/>
 </segment>
 </net>
 <net name="N$33" class="0">
@@ -15383,7 +15383,7 @@ high speed (Philips)</description>
 <pinref part="STEP_7" gate="G$1" pin="P$2"/>
 <pinref part="STEP_8" gate="G$1" pin="P$2"/>
 <pinref part="STEP_9" gate="G$1" pin="P$2"/>
-<pinref part="U$10" gate="G$1" pin="P$2"/>
+<pinref part="STEP_10" gate="G$1" pin="P$2"/>
 </segment>
 </net>
 <net name="N$36" class="0">
@@ -15426,7 +15426,7 @@ high speed (Philips)</description>
 <pinref part="STEP_7" gate="G$1" pin="P$1"/>
 <pinref part="STEP_8" gate="G$1" pin="P$1"/>
 <pinref part="STEP_9" gate="G$1" pin="P$1"/>
-<pinref part="U$10" gate="G$1" pin="P$1"/>
+<pinref part="STEP_10" gate="G$1" pin="P$1"/>
 <pinref part="ON_OFF" gate="G$1" pin="P$1"/>
 </segment>
 </net>
