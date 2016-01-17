@@ -4,7 +4,7 @@
 (This file generated from the board:)
 (.../little_gate_sequencer/eagle/lil_gate_sequencer.brd)
 (Current profile is .../pcbgcode.repo/profiles/mach.pp  )
-(This file generated 1/16/16 10:00 PM)
+(This file generated 1/16/16 10:13 PM)
 (Settings from pcb-machine.h)
 (spindle on time = 0.0000)
 (spindle speed = 20000.0000)
