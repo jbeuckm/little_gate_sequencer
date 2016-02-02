@@ -14783,7 +14783,6 @@ drill 1.1 mm</description>
 <part name="R11" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
 <part name="C4" library="rcl" deviceset="C-US" device="050-024X044" value="100p"/>
 <part name="R12" library="rcl" deviceset="R-US_" device="0207/7" value="10k"/>
-<part name="LED11" library="led" deviceset="LED" device="5MM"/>
 <part name="R13" library="rcl" deviceset="R-US_" device="0207/7" value="4k7"/>
 <part name="STEP_1" library="jameco" deviceset="MTS-102-C4" device=""/>
 <part name="STEP_2" library="jameco" deviceset="MTS-102-C4" device=""/>
@@ -14803,6 +14802,8 @@ drill 1.1 mm</description>
 <part name="LENGTH_1" library="solpad" deviceset="LSP11" device=""/>
 <part name="LENGTH_LONG" library="solpad" deviceset="LSP11" device=""/>
 <part name="LENGTH_SHORT" library="solpad" deviceset="LSP11" device=""/>
+<part name="OUT_LED" library="solpad" deviceset="LSP11" device=""/>
+<part name="OUT_LED1" library="solpad" deviceset="LSP11" device=""/>
 </parts>
 <sheets>
 <sheet>
@@ -14876,7 +14877,6 @@ drill 1.1 mm</description>
 <instance part="R11" gate="G$1" x="259.08" y="114.3" rot="R180"/>
 <instance part="C4" gate="G$1" x="266.7" y="45.72"/>
 <instance part="R12" gate="G$1" x="259.08" y="43.18" rot="R90"/>
-<instance part="LED11" gate="G$1" x="312.42" y="55.88"/>
 <instance part="R13" gate="G$1" x="312.42" y="43.18" rot="R270"/>
 <instance part="STEP_1" gate="G$1" x="142.24" y="101.6" rot="R90"/>
 <instance part="STEP_2" gate="G$1" x="152.4" y="101.6" rot="R90"/>
@@ -14896,6 +14896,8 @@ drill 1.1 mm</description>
 <instance part="LENGTH_1" gate="1" x="248.92" y="114.3" rot="R90"/>
 <instance part="LENGTH_LONG" gate="1" x="243.84" y="116.84" rot="R270"/>
 <instance part="LENGTH_SHORT" gate="1" x="243.84" y="111.76" rot="R270"/>
+<instance part="OUT_LED" gate="1" x="312.42" y="60.96" rot="R180"/>
+<instance part="OUT_LED1" gate="1" x="312.42" y="53.34"/>
 </instances>
 <busses>
 </busses>
@@ -15064,10 +15066,10 @@ drill 1.1 mm</description>
 <pinref part="OUT" gate="G$1" pin="TIP"/>
 <wire x1="309.88" y1="106.68" x2="312.42" y2="106.68" width="0.1524" layer="91"/>
 <wire x1="312.42" y1="106.68" x2="317.5" y2="106.68" width="0.1524" layer="91"/>
-<wire x1="312.42" y1="106.68" x2="312.42" y2="58.42" width="0.1524" layer="91"/>
+<wire x1="312.42" y1="106.68" x2="312.42" y2="63.5" width="0.1524" layer="91"/>
 <junction x="312.42" y="106.68"/>
-<pinref part="LED11" gate="G$1" pin="A"/>
 <pinref part="IC1" gate="D" pin="O"/>
+<pinref part="OUT_LED" gate="1" pin="MP"/>
 </segment>
 </net>
 <net name="N$2" class="0">
@@ -15541,9 +15543,9 @@ drill 1.1 mm</description>
 </net>
 <net name="N$43" class="0">
 <segment>
-<pinref part="LED11" gate="G$1" pin="C"/>
 <pinref part="R13" gate="G$1" pin="1"/>
 <wire x1="312.42" y1="48.26" x2="312.42" y2="50.8" width="0.1524" layer="91"/>
+<pinref part="OUT_LED1" gate="1" pin="MP"/>
 </segment>
 </net>
 </nets>
